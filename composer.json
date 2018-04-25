@@ -1,0 +1,23 @@
+{
+    "name": "acro5piano/pest",
+    "description": "A php unit testing library with Rspec style",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "gosho-kazuya",
+            "email": "ketsume0211@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Acro5piano\\Pest\\": "src/Pest"
+        }
+    }
+}
