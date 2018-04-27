@@ -2,6 +2,8 @@
 
 A php unit testing library with Rspec style.
 
+[Under developing]
+
 # Example
 
 ```php
@@ -27,6 +29,12 @@ Result:
 ![image](https://github.com/acro5piano/pest/blob/master/screenshot.png)
 
 # Documentation
+
+## Install
+
+```
+composer require --dev acro5piano/pest
+```
 
 ## Grouping
 
