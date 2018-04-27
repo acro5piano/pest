@@ -24,14 +24,18 @@ Spec::describe('add', function ($it) {
 
 Result:
 
-# Grouping
+![image](https://github.com/acro5piano/pest/blob/master/screenshot.png)
+
+# Documentation
+
+## Grouping
 
 You can nest with Type Hint.
 
 ```php
 use Acro5piano\Pest\Describe;
 
-Spec::describe('1: nested describe', function (Describe $describe) {
+Spec::describe('1: first describe', function (Describe $describe) {
     $describe('2: second describe', function ($it) {
         $it('3: finally it comes', function ($expect) {
             $expect([1, 2])->not()->toContain(1);
@@ -44,12 +48,12 @@ Result:
 
 ```
 Failed
-  1: nested describe
+  1: first describe
       2: second describe
             3: finally it comes
 ```
 
-# Assertions
+## Assertions
 
 `toBe`
 `toContain`
