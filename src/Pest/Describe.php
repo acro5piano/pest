@@ -15,18 +15,14 @@ class Describe
         $this->descriptions = $descriptions;
     }
 
+    public function __invoke(...$args)
+    {
+        $this->it(...$args);
+    }
+
     public function it(string $description, callable $callable)
     {
         $this->descriptions[] = $description;
-        $callable(new It($this->descriptions));
+        $callable(new It(...$this->descriptions));
     }
-
-    /*
-    public function describe(string $description, callable $callable)
-    {
-        $this->descriptions[] = $description;
-
-        return new Describe($this->descriptions);
-    }
-    */
 }
