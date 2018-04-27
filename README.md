@@ -63,8 +63,8 @@ Failed
 
 ## Assertions
 
-`toBe`
-`toContain`
+- `toBe`
+- `toContain`
 
 `not()` invert the condition. e.g.)
 
