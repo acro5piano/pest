@@ -24,15 +24,16 @@ class It
     {
         try {
             $callable(new Expect($this->descriptions));
+            echo "\033[32mSuccess\033[0m\n";
+            $this->trace($description);
         } catch (NotMatchException $e) {
+            echo "\033[31mFailed\033[0m\n";
             $this->trace($description);
         }
     }
 
     private function trace(string $description)
     {
-        echo 'Failed:'."\n";
-
         $descriptions = array_merge($this->descriptions, [$description]);
         foreach ($descriptions as $depth => $d) {
             foreach (range(0, $depth) as $_) {
